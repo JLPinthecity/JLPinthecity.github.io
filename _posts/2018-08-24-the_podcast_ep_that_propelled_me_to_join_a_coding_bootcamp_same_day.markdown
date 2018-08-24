@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "The podcast ep that propelled me to join a coding bootcamp same day"
-date:       2018-08-24 14:52:54 +0000
+date:       2018-08-24 10:52:55 -0400
 permalink:  the_podcast_ep_that_propelled_me_to_join_a_coding_bootcamp_same_day
 ---
 
 
-After dreaming about learning how to code while working at several startups and websites over the start of my journalism career, I finally took the leap after listening to an episode of [The Tim Ferriss Podcast](https://tim.blog/podcast/), featuring well-known supermodel Karlie Kloss.
+After dreaming about learning how to code while working at several startups and websites over the start of my journalism career, I finally took the leap after listening to an episode of [The Tim Ferriss Podcast](https://tim.blog/podcast/), featuring Karlie Kloss.
 
 Working in media, I knew Kloss as a runway and YouTube-famous supermodel. But on this hour-long podcast episode, I learned that she recently founded a free coding camp for girls called [Kode With Klossy](https://www.kodewithklossy.com).
 
