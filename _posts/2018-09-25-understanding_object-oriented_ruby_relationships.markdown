@@ -5,7 +5,7 @@ date:       2018-09-25 12:13:06 -0400
 permalink:  understanding_object-oriented_ruby_relationships
 ---
 
-As a beginner programmer, I had the hardest time wrapping my head around the concept (and formatting) of object-oriented relationships in code. But after a few weeks of reading explainers and watching OO Relationship tutorial videos, I can see OO relationships a little more clearly now. Here, I’m going to distill examples of belongs to, has many, and has many through relationships down to the nitty gritty, which helped me comprehend the concepts. Hopefully, it’s useful to you too. 
+As a beginner programming student, I had the hardest time wrapping my head around the concept (and formatting) of object-oriented relationships in code. But after a few weeks of reading explainers and watching OO Relationship tutorial videos, I can see OO relationships a little more clearly now. Here, I’m going to distill examples of belongs to, has many, and has many through relationships down to the nitty gritty, which helped me comprehend the concepts. Hopefully, it’s useful to you too. 
 
 **Belongs to relationship**
 
@@ -57,9 +57,11 @@ nycshelter.dogs
 
 When we ask nycshelter, an instance of Shelter, what dogs it has many of, it has no clue. Looking at the error, we have a clue, which points to what we need to do next. We need to define a method for dogs for the shelter. But every instance of shelter in general should probably know what dogs it has many of. 
 
+
+
 **Has Many Relationships**
 
-Here's the second layer of the relationship. A shelter *has many* dogs or you could say the shelter has a **collection** of dogs. 
+Here's the flip side of the belongs to relationship. A shelter *has many* dogs or you could say the shelter has a **collection** of dogs. 
 
 To establish a has many relationship, our owner instance needs an empty array to store its collection of items (in this case, dogs), where every instance of the dog that's instantiated can be added. 
 
@@ -119,14 +121,117 @@ Now, the flip side of the relationship—the has many relationship—is complete
 
 One way I get my brain to comprehend complicated Ruby concepts is by breaking them down into simple rules or its smallest components. I’m going to try that, here, with the has many relationship. 
 
-The has many relationship describes the connection between 3 items, where 1 of three items provides an indirect link (or relationship) between the other 2 items. 
+The **has many relationship** describes the connection between 3 classes, wherein 1 of 3 classes provides an indirect link (or relationship) between the other 2. 
 
 - One item will be the middle man and provides an indirect relationship between or through two objects 
 - The shared item will belong to the other two items
 - The other two items will have many of the shared item
 
+For example:
+
+                 ----> dog ----> owner
+shelter   ----> dog ----> owner
+                 ----> dog ----> owner
+								 
+								 
+In this relationship:
+* shelter has many dogs
+* dog belongs to shelter and owner
+* owners has many dogs 
+* *through* dogs, shelter has many owners and owners has many shelters
 
 
+```ruby
+class Shelter #has many dogs
+  attr_accessor :name, :city
+  @@all = []
+
+  def initialize (name, city)
+    @name = name
+    @city = city
+    @dogs = []        
+    @@all << self
+  end
+
+  def add_dog(dog) #always should have an argument so we can pass in an instance of dog
+    dog.shelter = self
+    @dogs << dog
+  end
+
+  def dogs
+    @dogs
+  end
+
+  def self.all
+    @all
+  end
+end
+
+class Dog #belong to a shelter & an owner
+  attr_accessor :name, :age, :breed, :shelter, :owner
+  @@all = []
+
+  def initialize (name, age, breed)
+    @name = name
+    @age = age
+    @breed = breed
+    @@all << self
+  end
+
+  def self.all
+    @all
+  end
+end
+
+class Owner #has many dogs 
+  attr_accessor :name, :age, :dogs
+  @@all = []
+
+  def initialize (name, age)
+    @name = name
+    @age = age
+    @dogs = []
+    @shelters = []
+    @@all << self
+  end 
+
+  def add_dog(dog)
+    @dogs << dog
+    dog.owner = self
+  end
+
+  def shelters
+    self.dogs.each do |dog| 
+    @shelters << dog.shelter if dog.shelter
+    end
+    @shelters
+  end
+    
+  def self.all
+    @@all
+  end
+end
+```
+
+With all this, we can invoke:
+
+```ruby
+ruffles = Dog.new("ruffles", 1, "corgi")
+queensshelter = Shelter.new("Queens Humane Society", "NYC")
+ruffles.shelter = queensshelter
+ruffles.shelter
+queensshelter.add_dog(ruffles)
+
+joe = Owner.new("joe", 30)
+joe.add_dog(ruffles)
+
+
+joe.shelters
+joe.shelters.each {|shelter| puts shelter.name}
+=> Queens Humane Society
+=> [#<Shelter:0x00005612a3437d38 @name="Queens Humane Society", @city="NYC", @dogs=[#<Dog:0x00005612a3437db0 @name="ruffles", @age=1, @breed="corgi", @shelter=#<Shelter:0x00005612a3437d38 ...>, @owner=#<Owner:0x00005612a3437cc0 @name="joe", @age=30, @dogs=[#<Dog:0x00005612a3437db0 ...>], @shelters=[...]>>]>, #<Shelter:0x00005612a3437d38 @name="Queens Humane Society", @city="NYC", @dogs=[#<Dog:0x00005612a3437db0 @name="ruffles", @age=1, @breed="corgi", @shelter=#<Shelter:0x00005612a3437d38 ...>, @owner=#<Owner:0x00005612a3437cc0 @name="joe", @age=30, @dogs=[#<Dog:0x00005612a3437db0 ...>], @shelters=[...]>>]>]
+
+```
 
 
 
