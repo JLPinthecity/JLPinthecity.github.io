@@ -25,9 +25,9 @@ end
 
 The above code allows us to create a new dog and assign ownership of the dog to a shelter. 
 
-**Step 1:** Create new dog and assign it equal to “bandit” variable. 
-**Step 2:** Create new shelter 
-**Step 3:** Assign bandit's shelter attribute to your instance of Shelter that you just created
+**Step 1:** Create new dog and assign it equal to “bandit” variable. <br>
+**Step 2:** Create new shelter <br>
+**Step 3:** Assign bandit's shelter attribute to your instance of Shelter that you just created <br>
 
 Voila, Bandit is now a instance of the Dog class with a shelter attribute. 
 
