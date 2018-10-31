@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "The podcast ep that propelled me to join a coding bootcamp same day"
+title:      "The podcast episode that propelled me to join a coding bootcamp same day"
 date:       2018-08-24 10:52:55 -0400
 permalink:  the_podcast_ep_that_propelled_me_to_join_a_coding_bootcamp_same_day
 ---
@@ -21,7 +21,7 @@ When Ferriss asked why she finally learned to code and what she immediately gain
 
 Even with a baseline understanding of the basics of the code, "you understand high level how things are built, you can understand what is possible. And I think that that’s what’s really exciting, even just as an entrepreneur," Kloss said. 
 
-That really resonated with me, as someone who has worked as a web producer for a major women's magazine. My role consisently included working in our company's content management system, building articles using HTML, inputting CSS code (written by someone else), and reporting bugs. I had a strong desire to learn how things work, why website features break (requiring daily/weekly bug reports to our dev team), and what the CSS code I was copying and pasting into our CMS was doing. 
+That really resonated with me, as someone who has worked as a web producer for a major women's magazine. My role consistently included working in our company's content management system, building articles using HTML, inputting CSS code (written by someone else), and reporting bugs. I had a strong desire to learn how things work, why website features break (requiring daily/weekly bug reports to our dev team), and what the CSS code I was copying and pasting into our CMS was doing. 
 
 Kloss also talks about feeling like an intruder, in the fashion/modeling industry, and the inner voice that says "who are you to learn to code?!" that I completely related with. But she talked about taking a week-long course at the Flatiron School in New York.
 
