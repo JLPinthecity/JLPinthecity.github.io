@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "The Send Method: What it does and when to use send"
+title:      "The Send Method: What it does and when to use it"
 date:       2018-10-31 12:43:59 -0400
 permalink:  the_send_method_what_it_does_and_when_to_use_send
 ---
