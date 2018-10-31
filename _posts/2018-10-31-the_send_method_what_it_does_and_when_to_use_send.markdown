@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "The Send Method: What it does and when to use .send()"
-date:       2018-10-31 16:43:58 +0000
+title:      "The Send Method: What it does and when to use send"
+date:       2018-10-31 12:43:59 -0400
 permalink:  the_send_method_what_it_does_and_when_to_use_send
 ---
 
