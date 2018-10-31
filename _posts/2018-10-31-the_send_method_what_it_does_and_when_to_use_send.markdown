@@ -6,7 +6,7 @@ permalink:  the_send_method_what_it_does_and_when_to_use_send
 ---
 
 
-First, let’s go over the need-to-know essentials. When you’re calling an method on an object using dot (.) notation, like in the example below, you’re essentially passing a message to it. 
+First, let’s go over the need-to-know essentials. When you’re calling n method on an object using dot (.) notation, like in the example below, you’re essentially passing a message to it. 
 
 ```ruby 
 
@@ -15,9 +15,9 @@ First, let’s go over the need-to-know essentials. When you’re calling an met
 
 ```
 
-The string is the object.
-The dot is the method in which we’re sending the object a message or command.
-Downcase or the argument is the message. 
+* The string is the **object**.
+* The dot is the **method** in which we’re sending the object a message or command.
+* Downcase or the argument is the **message**. 
 
 We can also carry out the same command with the send method. 
 
