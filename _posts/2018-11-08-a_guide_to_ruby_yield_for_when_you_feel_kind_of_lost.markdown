@@ -13,7 +13,7 @@ Important background:
 
 <hr>
 
-**What does yield do? **
+<b>What does yield do?</b>
 (Using examples from the Learn.co Yield and Blocks lesson).
 
 ```
@@ -35,7 +35,7 @@ Calling the yield keyword from within a method acts as a pause button that momen
 
 <hr>
 
-**Yield with parameters**
+<b>Yield with parameters</b>
 
 Important background: 
 - What is are parameters versus arguments? The term argument is commonly used to refer to variable names incorporated within a method definition and the value that’s passed in within a method call but there’s a distinction. 
@@ -68,7 +68,7 @@ And that’s exactly how the #collect works. We’re yielding element to the blo
 
 <hr>
 
-**Importance of yield **
+<b>Importance of yield</b>
 
 Yield is essential in Ruby because it helps us avoid sandwich code—where the set up is the same, the body is different, and the tear down is different. Yield allows us to inject a value into a block—chunk of code—that helps our method function in a slightly different way. 
 
