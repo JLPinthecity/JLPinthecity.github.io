@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "A Guide to Ruby *Yield* for When You Feel Kind of Lost "
+title:      "A Guide to Ruby Yield for When You Feel Kind of Lost "
 date:       2018-11-08 17:42:19 -0500
 permalink:  a_guide_to_ruby_yield_for_when_you_feel_kind_of_lost
 ---
@@ -23,7 +23,7 @@ def yielding
    puts “now we are back in the method”
  end
  
-yielding { puts “the method has yielded to the block! }
+yielding { puts “the method has yielded to the block!" }
 
 => 
 the program is executing the code inside the method
