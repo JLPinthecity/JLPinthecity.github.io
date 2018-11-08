@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "A Guide to Ruby *Yield* for When You Feel Kind of Lost "
-date:       2018-11-08 22:42:18 +0000
+date:       2018-11-08 17:42:19 -0500
 permalink:  a_guide_to_ruby_yield_for_when_you_feel_kind_of_lost
 ---
 
@@ -11,9 +11,9 @@ For me, the most confusing part of learning and *actually* comprehending the con
 Important background:
 - Blocks refer to code that lives between ‘do’ and ‘end’ keywords or curly braces { }, when we’re working with one liners. 
 
-—— 
+<hr>
 
-What does yield do? 
+**What does yield do? **
 (Using examples from the Learn.co Yield and Blocks lesson).
 
 ```
@@ -33,9 +33,9 @@ now we are back in the method
 ```
 Calling the yield keyword from within a method acts as a pause button that momentarily stops execution of the method you’re in, yielding the right of turn to the block, and returns to the method once the block runs. 
 
-—— 
+<hr>
 
-Yield with parameters
+**Yield with parameters**
 
 Important background: 
 - What is are parameters versus arguments? The term argument is commonly used to refer to variable names incorporated within a method definition and the value that’s passed in within a method call but there’s a distinction. 
@@ -66,7 +66,9 @@ The return value for yield is the return value of the block that you’re yieldi
 
 And that’s exactly how the #collect works. We’re yielding element to the block with #each but we’re capturing the return value of that block and returning it. 
 
-Importance of yield 
+<hr>
+
+**Importance of yield **
 
 Yield is essential in Ruby because it helps us avoid sandwich code—where the set up is the same, the body is different, and the tear down is different. Yield allows us to inject a value into a block—chunk of code—that helps our method function in a slightly different way. 
 
