@@ -73,7 +73,7 @@ And that’s exactly how the #collect works. We’re yielding element to the blo
 Yield is essential in Ruby because it helps us avoid sandwich code—where the set up is the same, the body is different, and the tear down is different. Yield allows us to inject a value into a block—chunk of code—that helps our method function in a slightly different way. 
 
 
-**Sources: **
+Sources:
 https://www.codecademy.com/forum_questions/51c72e759c4e9d410501df42 
 https://gist.github.com/lumberj/3768434
 
