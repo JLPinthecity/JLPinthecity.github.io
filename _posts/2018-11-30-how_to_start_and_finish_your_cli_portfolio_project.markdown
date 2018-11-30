@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "How to Start (and Finish) Your CLI Portfolio Project"
-date:       2018-11-30 22:16:26 +0000
+title:      "How to Start and Finish Your CLI Portfolio Project"
+date:       2018-11-30 17:16:26 -0500
 permalink:  how_to_start_and_finish_your_cli_portfolio_project
 ---
 
