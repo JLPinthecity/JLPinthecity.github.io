@@ -1,15 +1,14 @@
 # Site settings
+author: Joann Pan
 title: Joann's Coding Journey
 header-img: img/home-bg.png
 email: joannlpan@gmail.com
-copyright_name: JLPinthecity
+copyright_name: Joann Pan
 description: > # this means to ignore newlines until "baseurl:"
   Because it's time to join the real world of computers
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  JLPinthecity
-learn_profile: JLPinthecity
-email_username: joannlpan@gmail.com
 
 # Build settings
 markdown: kramdown
